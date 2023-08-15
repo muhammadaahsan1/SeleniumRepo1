@@ -26,15 +26,12 @@ public class WhileTest {
 		
 		
 		
-		
-		
-		
 		do{
 			
-			System.out.print("Was ist dein Namen");
+			System.out.print("Was ist dein Namen ");
 			Namen =scanner.nextLine();
 			
-		} while(Namen.isBlank()) ;
+		 } while(Namen.isBlank()) ;
 		
 		System.out.println("Guten Tag: "+ Namen);
 
