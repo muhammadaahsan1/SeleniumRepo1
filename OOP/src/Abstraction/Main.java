@@ -15,11 +15,11 @@ public class Main {
 		
 		
 		Car car= new Car();
-		car.go();
+		car.go(1,2,3);
 		
 		
 		Trucks truck = new Trucks();
-		truck.go();
+		truck.go(1,2,4);
 	}
 
 }

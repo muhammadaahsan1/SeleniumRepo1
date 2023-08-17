@@ -22,7 +22,7 @@ package methodOverloading;
 	  {
 	    CalculateSquare obj = new CalculateSquare();
 	    obj.square();
-	    obj.square(5);   
+	    obj.square(2.22f);   
 	   
 	  }
 	 }

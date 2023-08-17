@@ -14,9 +14,11 @@ public class NestedIf {
 			
 		}
 		
-		else {
+		if(speed<= 40)
+		{
 			System.out.println("The speed is high");
-			if(speed > 95) {
+		}
+			if(speed >= 95) {
 				System.out.println("The speed is very high, slow down!");
 			}
 			else {
@@ -31,4 +33,4 @@ public class NestedIf {
 
 	}
 
-}
+

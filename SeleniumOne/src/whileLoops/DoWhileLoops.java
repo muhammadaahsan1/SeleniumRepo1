@@ -10,7 +10,7 @@ public class DoWhileLoops {
 	      System.out.println(i);
 	      i++;
 	    }
-	    while (i < 4);  
+	    while (i < 60);  
 	    
 	    
 	    

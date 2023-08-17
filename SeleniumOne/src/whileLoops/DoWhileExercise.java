@@ -29,7 +29,7 @@ public class DoWhileExercise {
 					
 					}
 										
-			}while(n1>10 || n1<1 || result);
+			}while(n1>10 || n1<=1 || result);
 		
 			
 		    System.out.println(n1 + " is a number between 1 and 10" );

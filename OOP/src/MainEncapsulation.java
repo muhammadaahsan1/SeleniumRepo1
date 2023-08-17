@@ -20,12 +20,15 @@ public class MainEncapsulation {
 		
 		
 //		By calling setYear method we have changed the value of the year
+		
 		car.setYear(2023);
+		car.setColor("Purple");
+		car.setMake("Mercedez");
 		
 		
 		System.out.println(car.getYear());
 		System.out.println(car.getColor());
-		System.out.println(car.getYear());
+		System.out.println(car.getMake());
 		
 		
 		

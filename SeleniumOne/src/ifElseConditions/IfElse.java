@@ -6,10 +6,10 @@ public class IfElse {
 		// TODO Auto-generated method stub
 		
 		
-		int age = 20;
+		int age =60;
 		
 		if(age>=60) {
-			System.out.println();
+			System.out.println("jhgf");
 		}
 		
 		else if(age>=20 & age<=50) {
