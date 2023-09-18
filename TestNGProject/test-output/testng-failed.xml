@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Ahsan1.TestingNG.EbayTest">
+      <class name="com.Ahsan1.TestingNG.BasicTestDataDrivenTesting">
         <methods>
-          <include name="ebayRegPageTest" invocation-numbers="0 1"/>
-          <include name="startFireFox"/>
-          <include name="afterMethod"/>
+          <include name="TestLogin" invocation-numbers="1 2"/>
         </methods>
-      </class> <!-- com.Ahsan1.TestingNG.EbayTest -->
+      </class> <!-- com.Ahsan1.TestingNG.BasicTestDataDrivenTesting -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
