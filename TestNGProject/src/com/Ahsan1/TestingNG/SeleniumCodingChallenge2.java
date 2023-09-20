@@ -20,10 +20,10 @@ public class SeleniumCodingChallenge2 {
 
     public static void main(String[] args) throws InterruptedException {
 
-        String sec_RecommendedForYou = "//h3[text()='Recommended For You']";
-        String sec_TopPicks = "//h3[text()='Top picks in electronics']";
+        String sec_RecommendedForYou = "//h2[normalize-space()='Recommended for you']";
+        String sec_TopPicks = "//h2[normalize-space()='Trending deals in electronics']";
         //*** Hardcoded the New arrivals section xpath ***//
-        String sec_NewArrivals = "//div[7]//h3[text()='New arrivals']";
+        String sec_NewArrivals = "//div[7]//h3[normalize-space()='New arrivals']";
         String sec_SaveBigOnMobile = "//h3[contains(text(),'Save big on mobiles')]";
 
         
