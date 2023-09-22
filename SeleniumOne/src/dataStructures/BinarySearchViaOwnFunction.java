@@ -9,7 +9,7 @@ public class BinarySearchViaOwnFunction {
 		
 		// binary search = Search algorithm that finds the position
 		//				   of a target value within a sorted array.
-		//				   Half of the array is eliminated during each "step"
+		//				   Half of the array is eliminated/disregarded during each "step"
 		
 		
 		int[] array= new int[10];
