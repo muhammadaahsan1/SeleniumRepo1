@@ -5,7 +5,7 @@
  * 
  */
 
-package linkedLists;
+package dataStructures;
 
 
 
