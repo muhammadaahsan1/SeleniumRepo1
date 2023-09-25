@@ -29,9 +29,14 @@ public class SeleniumCodingChallenge2 {
         
         driver.get("https://www.noon.com/uae-en/");
         driver.manage().window().maximize();
+        
+        /*To get all product names, getAllProductNames methods is written below
+         * Using this same method, product names from different carousels i.e. Recommended For you, Top picks, New Arrivals,
+         * and SaveBigOnMobile have been called
+        */
 
         System.out.println("Section : Recommended For You");
-        getAllProductNames(sec_RecommendedForYou).forEach(System.out::println);
+        getAllProductNames(sec_RecommendedForYou).forEach(System.out::println);  //This section Name's xpath is being passed to getAllProductNames method and then to select section and then to getProductNames 
         System.out.println("-----------------------------------------------------------------");
 
         System.out.println("Section : Top picks in electronics");
@@ -49,18 +54,21 @@ public class SeleniumCodingChallenge2 {
         driver.quit();
     }
 
-
+    //here sectionName has the section name's xpath
     public static void selectSection(String sectionName) throws InterruptedException {
 
-        Actions action = new Actions(driver);
-        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        Actions action = new Actions(driver);  //Actions class is an ability provided by Selenium for handling keyboard and mouse events
+        JavascriptExecutor executor = (JavascriptExecutor) driver; //JavaScriptExecutor is an Interface that helps to execute JavaScript through Selenium Webdriver. e.g. scroll into view command, to generate alert window, to navigate to new url, performing a sleep in the browser under test, click on a certain element where selenium fails
 
-        do {
+        do //this do while loop will keep running as long as the condition at the last is true, it will only break when we will find the element in the try part
+        {
             try {
                 WebElement ele_Section = driver.findElement(By.xpath(sectionName));
-                executor.executeScript("arguments[0].scrollIntoView(true);", ele_Section);
-                break;
-            } catch (NoSuchElementException e) {
+                //The below command will scroll until the element is in view:
+                executor.executeScript("arguments[0].scrollIntoView(true);", ele_Section); // The executeScript() method from the JavascriptExecutor Interface can invoke multiple arguments in the form of arguments[0], arguments[1], etc
+                break;  
+            } catch (NoSuchElementException e) //if this exception is thrown for the current view, it keeps pressing page down key until we found the ele_Section element
+            {
                 action.sendKeys(Keys.PAGE_DOWN).perform();
                 Thread.sleep(1000);
             }
@@ -71,6 +79,7 @@ public class SeleniumCodingChallenge2 {
     public static List<String> getProductNames(String sectionName) throws InterruptedException {
 
         JavascriptExecutor executor = (JavascriptExecutor) driver;
+        //creating a list from an array
         List<String> itemsToAdd = new ArrayList<>();
 
         do {
