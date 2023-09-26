@@ -23,8 +23,8 @@ public class SeleniumCodingChallenge2 {
         String sec_RecommendedForYou = "//h2[normalize-space()='Recommended for you']";
         String sec_TopPicks = "//h2[normalize-space()='Trending deals in electronics']";
         //*** Hardcoded the New arrivals section xpath ***//
-        String sec_NewArrivals = "//div[7]//h3[normalize-space()='New arrivals']";
-        String sec_SaveBigOnMobile = "//h3[contains(text(),'Save big on mobiles')]";
+//        String sec_NewArrivals = "//div[7]//h3[normalize-space()='New arrivals']";
+//        String sec_SaveBigOnMobile = "//h3[normalize-space(text(),'Save big on mobiles')]";
 
         
         driver.get("https://www.noon.com/uae-en/");
@@ -44,17 +44,17 @@ public class SeleniumCodingChallenge2 {
         System.out.println("-----------------------------------------------------------------");
 
         System.out.println("Section : New arrivals");
-        getAllProductNames(sec_NewArrivals).forEach(System.out::println);
+//        getAllProductNames(sec_NewArrivals).forEach(System.out::println);
         System.out.println("-----------------------------------------------------------------");
 
         System.out.println("Section : Save big on mobiles & tablets");
-        getAllProductNames(sec_SaveBigOnMobile).forEach(System.out::println);
+//        getAllProductNames(sec_SaveBigOnMobile).forEach(System.out::println);
         System.out.println("-----------------------------------------------------------------");
 
         driver.quit();
     }
 
-    //here sectionName has the section name's xpath
+    //here sectionName has the section name's xpath, the method below finds the section having a certain xpath
     public static void selectSection(String sectionName) throws InterruptedException {
 
         Actions action = new Actions(driver);  //Actions class is an ability provided by Selenium for handling keyboard and mouse events
@@ -83,7 +83,12 @@ public class SeleniumCodingChallenge2 {
         List<String> itemsToAdd = new ArrayList<>();
 
         do {
-            List<WebElement> allItems = driver.findElements(By.xpath(sectionName + "/../../..//div[@data-qa='product-name']/div"));
+        	//creating a list of webelements having a certain xpath i.e. here having same attribute as data-qa='product-name'
+            List<WebElement> allItems = driver.findElements(By.xpath(sectionName + "/../../..//div[@data-qa='product-name']"));
+            //Similar to collections, streams represent sequences of elements. Collections support operations such as add(), remove(), and contains() that work on a single element. Streams, in contrast, have bulk operations such as forEach(), filter(), map(), and reduce() that access all elements in a sequence. The notion of a Java stream is inspired by functional programming languages, where the corresponding abstraction is typically called a sequence, which also has filter-map-reduce operations
+            //The Stream filter() method is used to select elements as per the Predicate passed as argument. 
+           //The isDisplayed method in Selenium verifies if a certain element is present and displayed.
+            //the below line of code will take all elements in the allItems list which are found displayed and will place it in itemsToAdd
             allItems.stream().filter(WebElement::isDisplayed).forEach(element -> itemsToAdd.add(element.getText()));
             if (driver.findElement(By.xpath(sectionName + "/../../.." + NEXT_BUTTON)).getAttribute("class").contains("disabled")) {
                 break;
@@ -92,13 +97,19 @@ public class SeleniumCodingChallenge2 {
             Thread.sleep(1000);
         }
         while (true);
+        //This below line of code will print total items in any selected carousel found displayed
         System.out.println("Total items : " + itemsToAdd.stream().distinct().count());
+        //The below line of code adds the elements in itemsToAdd to a list
         return itemsToAdd.stream().distinct().sorted().collect(Collectors.toList());
     }
-
+    
+    
     public static List<String> getAllProductNames(String sectionName) throws InterruptedException {
-
+    	//this method itself calls further two methods
+    	
+    	//
         selectSection(sectionName);
+        //the below line returns the list of name of products obtained from any carousel having a cetain sectionName xpath
         return getProductNames(sectionName);
     }
 

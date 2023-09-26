@@ -4,6 +4,18 @@ public class SelectionSort1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		// selection sort = search through an array and keep track of the minimum value during 
+		//			         each iteration. At the end of each iteration, we swap values.
+		
+		//				 Quadratic time O(n^2)
+		//				 small data set = okay
+		//				 large data set = BAD// selection sort = search through an array and keep track of the minimum value during 
+		//			         each iteration. At the end of each iteration, we swap values.
+		
+		//				 Quadratic time O(n^2)
+		//				 small data set = okay
+		//				 large data set = BAD
 
 int array[] = {8, 7, 9, 2, 3, 1, 5, 4, 6};
 		
