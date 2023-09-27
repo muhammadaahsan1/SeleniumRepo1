@@ -2,7 +2,7 @@ package challenges;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
-
+import static org.junit.Assert.assertEquals;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -116,7 +116,7 @@ public class DarazLogin {
 		
 		String acutaltext ="s";
 		String expectedtext ="a";
-		Assert.assertequals(acutaltext,expectedtext);
+		org.junit.Assert.assertEquals(acutaltext,expectedtext);
 		
 		System.out.println("Execution Done");
 		//add 3 more products in cart and verify the quantity

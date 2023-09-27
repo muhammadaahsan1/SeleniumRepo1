@@ -12,6 +12,7 @@ public class LiveData {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		
 		String overallPopXpath ="//div[@class='maincounter-number']/span[@class='rts-counter']";
 		String todayPopXpath= "//div[text()='Today']//parent::div//span[@class='rts-counter']";
 		String thisYearPopXpath= "//div[text()='This year']//parent::div//span[@class='rts-counter']";
