@@ -27,10 +27,10 @@ public Properties initializeLangProp(String language) //I will write the return 
 	
 	switch(language.toLowerCase()) {
 	case "english":
-		ip = new FileInputStream(".src/main/resources/lang.english.properties"); //A FileInputStream obtains input bytes from a file in a file system. What files are available depends on the host environment.
+		ip = new FileInputStream("C:\\Users\\Syes Ahsan\\eclipse-workspace\\UnescoMultilingualSiteTesting\\src\\main\\resources\\lang.english.properties"); //A FileInputStream obtains input bytes from a file in a file system. What files are available depends on the host environment.
 		break;
 	case "french":
-		ip = new FileInputStream(".src/main/resources/lang.french.properties");
+		ip = new FileInputStream("C:\\Users\\Syes Ahsan\\eclipse-workspace\\UnescoMultilingualSiteTesting\\src\\main\\resources\\lang.french.properties");
 		break;
 		
 	case "Spanish":
