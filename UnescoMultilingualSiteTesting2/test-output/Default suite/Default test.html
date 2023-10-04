@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Oct 03 19:03:03 PKT 2023</td>
+<td>Started on:</td><td>Wed Oct 04 19:16:45 PKT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>17 seconds (17220 ms)</td>
+<tr><td>Total time:</td><td>84 seconds (84772 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testPackage.HomePageTest.checkPlaceholderExist()'><b>checkPlaceholderExist</b><br>Test class: testPackage.HomePageTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: #\/\/input\[\@id\=pgn\-searchfield\-input\-32007\)\]
+<td title='testPackage.ExploreCoursesTest.checkExploreCourses()'><b>checkExploreCourses</b><br>Test class: testPackage.ExploreCoursesTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //button[@id=&apos;main-search-search-submit&apos;]
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [f3487d40-e9e3-47b6-8790-476a338cfbde, findElement {using=id, value=//input[@id=pgn-searchfield-input-32007)]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 117.0.1, moz:accessibilityChecks: false, moz:buildID: 20230912013654, moz:debuggerAddress: 127.0.0.1:28286, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 1776, moz:profile: C:\Users\SYESAH~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:28286/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: f3487d40-e9e3-47b6-8790-476a338cfbde
+Command: [09f93b38-fcd5-445d-b690-f071cf124ec4, findElement {using=xpath, value=//button[@id=&apos;main-search-search-submit&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 117.0.1, moz:accessibilityChecks: false, moz:buildID: 20230912013654, moz:debuggerAddress: 127.0.0.1:43405, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 17540, moz:profile: C:\Users\SYESAH~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:43405/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 09f93b38-fcd5-445d-b690-f071cf124ec4
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -98,13 +98,10 @@ Session ID: f3487d40-e9e3-47b6-8790-476a338cfbde
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at utils.ElementUtil.getElement(ElementUtil.java:33)
-	at pages.HomePage.getPlaceholderElement(HomePage.java:24)
-	at pages.HomePage.isPlaceholderExist(HomePage.java:27)
-	at testPackage.HomePageTest.checkPlaceholderExist(HomePageTest.java:45)
+	at testPackage.ExploreCoursesTest.checkExploreCourses(ExploreCoursesTest.java:74)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -133,15 +130,15 @@ Session ID: f3487d40-e9e3-47b6-8790-476a338cfbde
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace465869765", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace465869765'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: #\/\/input\[\@id\=pgn\-searchfield\-input\-32007\)\]
+</pre></div><a href='#' onClick='toggleBox("stack-trace304966690", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace304966690'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //button[@id=&apos;main-search-search-submit&apos;]
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [f3487d40-e9e3-47b6-8790-476a338cfbde, findElement {using=id, value=//input[@id=pgn-searchfield-input-32007)]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 117.0.1, moz:accessibilityChecks: false, moz:buildID: 20230912013654, moz:debuggerAddress: 127.0.0.1:28286, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 1776, moz:profile: C:\Users\SYESAH~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:28286/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: f3487d40-e9e3-47b6-8790-476a338cfbde
+Command: [09f93b38-fcd5-445d-b690-f071cf124ec4, findElement {using=xpath, value=//button[@id=&apos;main-search-search-submit&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 117.0.1, moz:accessibilityChecks: false, moz:buildID: 20230912013654, moz:debuggerAddress: 127.0.0.1:43405, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 17540, moz:profile: C:\Users\SYESAH~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:43405/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 09f93b38-fcd5-445d-b690-f071cf124ec4
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -155,13 +152,10 @@ Session ID: f3487d40-e9e3-47b6-8790-476a338cfbde
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at utils.ElementUtil.getElement(ElementUtil.java:33)
-	at pages.HomePage.getPlaceholderElement(HomePage.java:24)
-	at pages.HomePage.isPlaceholderExist(HomePage.java:27)
-	at testPackage.HomePageTest.checkPlaceholderExist(HomePageTest.java:45)
+	at testPackage.ExploreCoursesTest.checkExploreCourses(ExploreCoursesTest.java:74)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -191,22 +185,8 @@ Session ID: f3487d40-e9e3-47b6-8790-476a338cfbde
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>0</td>
-<td>testPackage.HomePageTest@5afa3c9</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='testPackage.HomePageTest.checkContactExist()'><b>checkContactExist</b><br>Test class: testPackage.HomePageTest</td>
-<td></td>
-<td>3</td>
-<td>testPackage.HomePageTest@5afa3c9</td></tr>
+<td>71</td>
+<td>testPackage.ExploreCoursesTest@5afa3c9</td></tr>
 </table><p>
 </body>
 </html>

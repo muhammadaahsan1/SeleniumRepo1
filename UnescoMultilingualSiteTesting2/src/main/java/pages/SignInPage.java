@@ -5,17 +5,14 @@ import org.openqa.selenium.WebElement;
 
 import utils.ElementUtil;
 
-
-
-public class HomePage {
+public class SignInPage {
 	
 	private WebDriver driver; //access level of this declared variable (driver) is private to this class, however later we will assign the value of driver coming from DriverFactory class
 	private ElementUtil elementUtil; // maintaining a class (ElementUtil class imported here) instance as private
 	
-	public HomePage(WebDriver driver) //to maintain the same driver across various classes, this driver passed in this constructor will be coming from other test classe file(s)
+	public SignInPage(WebDriver driver) //to maintain the same driver across various classes, this driver passed in this constructor will be coming from other test classe file(s)
 	
-	{
-		
+	{		
 		this.driver=driver;
 		elementUtil=new ElementUtil(driver); //initializing ElementUtil class's object here, Inside ElementUtil Class I have created a constructor to pass the same driver, its a skill to pass driver from one page to another page using constructor
 	}
@@ -45,9 +42,5 @@ public class HomePage {
 		//4. This will make sure that whether webelement having a certain contact value, is found on page, if so true otherwise false
 		return getContactElement(contactValue).isDisplayed(); }
 		
-		
-	
-	
-	
 
 }

@@ -31,7 +31,7 @@ public class HomePageTest {
 		
 		//0.3 Inside Before Test; creating objects of classes 1st to call methods inside them
 		cp = new ConfigPropReader();
-		prop = cp.initializeLangProp("espanol");
+		prop = cp.initializeLangProp("english");//change the language here for the site
 		df = new DriverFactory();
 		driver = df.initializeDriver("firefox", prop);
 		homePage = new HomePage(driver);
@@ -42,6 +42,10 @@ public class HomePageTest {
 	@Test
 	public void checkPlaceholderExist() {
 		
+		System.out.println("**********$$$$$$$$$$$$**********************");
+		System.out.println(prop.getProperty("searchPlaceholder"));//just for checking which value it is taking 
+		System.out.println("***************$$$$$$$$$$*****************");
+		
 		Assert.assertTrue(homePage.isPlaceholderExist(prop.getProperty("searchPlaceholder")));
 		
 		
@@ -51,17 +55,12 @@ public class HomePageTest {
 	public void checkContactExist() {
 		System.out.println("**********$$$$$$$$$$$$**********************");
 		System.out.println(prop.getProperty("contactUs"));//just for checking which value it is taking 
-		System.out.println(prop.getProperty("searchPlaceholder"));
 		System.out.println("***************$$$$$$$$$$*****************");
 		Assert.assertTrue(homePage.isContactExist(prop.getProperty("contactUs")));//1. Assert to make sure that contact exist on the UI, this will send the value of contact from properties to the method isContactExist
 		
 	
 		
-	}
-	
-	
-	
-	
+	}	
 	
 	@AfterTest
 	public void teardown() {
